@@ -19,7 +19,7 @@ public class TD3Exo4 {
                         .collect(Collectors.toList());
 
         //System.out.println(count(list2, "33"));
-        printAndTime(() -> count(list2, "33"));
+        //printAndTime(() -> count(list2, "33"));
     }
 
     private static void printAndTime(Function<List<String>,Long> result){

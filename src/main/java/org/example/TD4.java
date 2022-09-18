@@ -1,8 +1,8 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class TD4 {
     public static void main(String[] args) throws EmployeException {
@@ -19,6 +19,7 @@ public class TD4 {
             l.add(e);
         }
         // Tri par salaires croissants
+        /*
         CompareSalaire comparateur = new CompareSalaire();
         Collections.sort(l, comparateur);
         System.out.println("Employés de " + e1.getNom()
@@ -27,5 +28,17 @@ public class TD4 {
             System.out.println(employe.getNom() + " gagne "
                     + employe.getSalaire());
         }
+        */
+
+        Map<Double, String> employe = l.stream().collect(Collectors.toMap(Employe::getSalaire, Employe::getNom));
+        System.out.println(employe);
+
+        List<Integer> list = List.of(1, 4, 7, 5);
+        System.out.println(list);
+    }
+
+    public static Integer add(int num){
+
+        return 0;
     }
 }

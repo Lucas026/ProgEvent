@@ -19,7 +19,7 @@
   </build>
   <packaging>jar</packaging>
 
-  <name>aled</name>
+  <name>ProgEvent</name>
   <url>http://maven.apache.org</url>
 
   <properties>

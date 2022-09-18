@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.function.BiFunction;
 
-public class TD3 {
+public class TD3Exo1 {
 
     public static void main(String[] args)
     {
@@ -12,8 +12,6 @@ public class TD3 {
 
         System.out.println(count(list, "hello"));
         System.out.println(count2(list, "hello"));
-
-        System.out.println(upperCase(list));
     }
 
     private static long count(List<String> list, String word) {
@@ -25,10 +23,4 @@ public class TD3 {
         BiFunction<List, String, Long> biFunction = (li, s) -> li.stream().filter(x -> x.equals(s)).count();
         return biFunction.apply(list, word);
     }
-
-    private static List<String> upperCase(List<String> list) {
-        BiFunction<List<String>, String, List<String>> upperFunction = li -> li
-        return upperFunction.apply(list);
-    }
-
 }

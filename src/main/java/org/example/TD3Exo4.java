@@ -6,6 +6,7 @@ import java.util.Random;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.function.LongFunction;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 public class TD3Exo4 {
@@ -19,13 +20,15 @@ public class TD3Exo4 {
                         .collect(Collectors.toList());
 
         //System.out.println(count(list2, "33"));
-        //printAndTime(() -> count(list2, "33"));
+        printAndTime(() -> count(list2, "33"));
+        printAndTime(() -> count2(list2, "33"));
+        printAndTime(() -> count3(list2, "33"));
     }
 
-    private static void printAndTime(Function<List<String>,Long> result){
+    private static void printAndTime(Supplier<Long> result){
         long start = System.nanoTime();
         long end = System.nanoTime();
-        System.out.println("result " + result);
+        System.out.println("result " + result.get());
         System.out.println(" elapsed time " + ((end / 1000000.0f) - (start / 1000000.0f)) + "ms");
     }
 
@@ -34,7 +37,6 @@ public class TD3Exo4 {
         return biFunction.apply(list, word);
     }
 
-    /*
     private static long count2(List<String> list, String word) {
         BiFunction<List, String, Long> biFunction = (li, s) -> li.stream().filter(x -> x.equals(s)).count();
         return biFunction.apply(list, word);
@@ -45,5 +47,4 @@ public class TD3Exo4 {
         BiFunction<List, String, Long> biFunction = (li, w) -> list.stream().filter(x -> x.equals(word)).mapToLong(x -> 1).sum();
         return biFunction.apply(list, word);
     }
-    */
 }

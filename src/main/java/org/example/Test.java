@@ -21,7 +21,7 @@ public class Test {
             l.add(e);
         }
 
-        Map<Double, String> employe = l.stream().filter(Employe::getSalaire > 15000).collect(Collectors.toMap(Employe::getSalaire, Employe::getNom));
+        Map<Double, String> employe = l.stream().filter((Employe) -> Employe.getSalaire() >= 15000).collect(Collectors.toMap(Employe::getSalaire, Employe::getNom));
         System.out.println(employe);
     }
 }

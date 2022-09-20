@@ -16,7 +16,7 @@ public class addition {
         list.add(4);
         list.add(7);
         list.add(5);
-        list.forEach(System.out::println);
+        list.forEach((num) -> System.out.println(add(num).applyAsLong(78)));
     }
 
     public static ToLongFunction<Integer> add(Integer calcul){

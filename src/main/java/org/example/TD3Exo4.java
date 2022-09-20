@@ -29,7 +29,7 @@ public class TD3Exo4 {
         long start = System.nanoTime();
         long end = System.nanoTime();
         System.out.println("result " + result.get());
-        System.out.println(" elapsed time " + ((end / 1000000.0f) - (start / 1000000.0f)) + "ms");
+        System.out.println(" elapsed time " + (end - start));
     }
 
     private static long count(List<String> list, String word) {

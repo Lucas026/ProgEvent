@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.*;
 import java.util.function.Function;
+import java.util.function.ToLongFunction;
 import java.util.stream.Collectors;
 
 public class TD4 {
@@ -32,13 +33,5 @@ public class TD4 {
 
         Map<Double, String> employe = l.stream().collect(Collectors.toMap(Employe::getSalaire, Employe::getNom));
         System.out.println(employe);
-
-        List<Integer> list = List.of(1, 4, 7, 5);
-        System.out.println(list);
-    }
-
-    public static Integer add(int num){
-
-        return 0;
     }
 }
